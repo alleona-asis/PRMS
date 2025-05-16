@@ -20,6 +20,7 @@ app.use(express.json());
 app.use(cors({ [
   origin: "https://prms-s784.onrender.com",
           "https://docsys.onrender.com",
+          "https://hmo-queue.netlify.app/healthcardvalidation",
       ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
