@@ -17,8 +17,10 @@ const patientRoutes = require("./routes/api/patient");
 app.use(express.json());
 
 // Set up CORS with specific origin
-app.use(cors({
-  origin: 'https://prms-s784.onrender.com',
+app.use(cors({ [
+  origin: "https://prms-s784.onrender.com",
+          "https://docsys.onrender.com",
+      ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true 
