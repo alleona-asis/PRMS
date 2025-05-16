@@ -18,6 +18,8 @@ app.use(express.json());
 
 // Set up CORS with specific origin
 const allowedOrigins = [
+  "http:localhost:3000",
+  "http:localhost:5173",
   "https://prms-s784.onrender.com",
   "https://docsys.onrender.com",
   "https://hmo-queue.netlify.app",
