@@ -63,7 +63,7 @@ export default function PatientRecord() {
 
     const fetchData = async () => {
         try {
-            const patientsRes = await fetch(const patientsRes = await fetch(`${process.env.REACT_APP_API_URL}/api/patients`);
+            const patientsRes = await fetch(`${process.env.REACT_APP_API_URL}/api/patients`);
             const patientsData = await patientsRes.json();
             setPatients(patientsData);
         } catch (err) {
