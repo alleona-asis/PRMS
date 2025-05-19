@@ -63,7 +63,7 @@ export default function PatientRecord() {
 
     const fetchData = async () => {
         try {
-            const patientsRes = await fetch("http://localhost:5000/api/patients");
+            const patientsRes = await fetch(const patientsRes = await fetch(`${process.env.REACT_APP_API_URL}/api/patients`);
             const patientsData = await patientsRes.json();
             setPatients(patientsData);
         } catch (err) {
@@ -113,8 +113,8 @@ export default function PatientRecord() {
     
         try {
             const url = editingPatientId 
-                ? `http://localhost:5000/api/patients/${editingPatientId}` 
-                : "http://localhost:5000/api/patients"; 
+                ? `${process.env.REACT_APP_API_URL}/api/patients/${editingPatientId}` 
+                : `${process.env.REACT_APP_API_URL}/api/patients`;
     
             const method = editingPatientId ? "PUT" : "POST"; 
     
@@ -155,7 +155,7 @@ export default function PatientRecord() {
     const handleDeletePatient = async (id) => {
         if (!id) return;
         try {
-            const response = await fetch(`http://localhost:5000/api/patients/${id}`, {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/api/patients/${id}`, {
                 method: "DELETE",
             });
     
