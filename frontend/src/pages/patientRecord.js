@@ -479,7 +479,6 @@ export default function PatientRecord() {
                             placeholder="Date Admitted" 
                             value={dateAdmitted} 
                             onChange={(e) => setDateAdmitted(e.target.value)} 
-                            readOnly
                             style={{ ...styles.input, color: dateAdmitted ? "#000" : "#757575" }}  
                             />
                         </div>
